@@ -1,0 +1,25 @@
+@import "../../../styles/breakpoints.module";
+
+
+
+.moonWrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  z-index: 2;
+
+  @media screen and (max-width: $phone-L) {
+   width: 150px;
+   height: 150px;
+   }
+
+  .moon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+
+
+ 
+  }
+}

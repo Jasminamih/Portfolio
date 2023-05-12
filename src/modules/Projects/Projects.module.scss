@@ -1,0 +1,33 @@
+
+@import "../../styles/colors.module";
+@import "../../styles/breakpoints.module";
+
+
+.projects {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 100px;
+  color:$white;
+
+  @media screen and (max-width: $phone-L) {
+   
+    width: 90%;
+   }
+}
+
+.cards {
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  @media screen and (max-width: $phone-L) {
+   
+    width: 100%;
+   }
+}

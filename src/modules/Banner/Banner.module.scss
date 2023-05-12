@@ -1,0 +1,38 @@
+@import "../../styles/colors.module";
+@import "../../styles/breakpoints.module";
+
+.banner {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  color: $white;
+  margin: 0 auto;
+  align-items: center;
+height: calc(100vh - 80px);
+  
+
+  @media screen and (max-width: $phone-L) {
+   flex-direction: column-reverse;
+   align-items: end;
+   gap: 3rem;
+   width: 90%;
+   justify-content: center;
+   padding-left: 30px;
+
+  }
+
+  h1 {
+    font-size: 70px;
+    margin-bottom: 1.2rem;
+
+    @media screen and (max-width: $phone-L) {
+font-size: 45px;     }
+  }
+
+  h2{
+    font-size: 30px;
+
+    @media screen and (max-width: $phone-L) {
+      font-size: 24px;     }
+  }
+}

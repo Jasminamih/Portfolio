@@ -2,6 +2,13 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "keywords": [
+    "stars",
+    "text",
+    "gradient",
+    "instances",
+    "gatsby"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +16,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@mui/material": "^5.12.2",
+    "@next/font": "^13.3.1",
+    "@react-three/drei": "^9.66.1",
+    "@react-three/fiber": "^8.13.0",
     "@types/node": "18.16.1",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
+    "@types/three": "^0.151.0",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
+    "framer-motion": "^10.12.4",
+    "maath": "^0.5.3",
+    "math-random": "^2.0.1",
     "next": "13.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-parallax-tilt": "^1.7.131",
+    "react-responsive": "^9.0.2",
+    "react-three": "^0.9.7",
+    "react-tilt": "^1.0.2",
+    "sass": "^1.62.1",
+    "three": "^0.152.1",
     "typescript": "5.0.4"
   }
 }

@@ -1,0 +1,25 @@
+@import "../../styles//colors.module";
+
+
+.desktopLinkWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  gap: 2px;
+  &:hover {
+    .linkLine {
+      width: 30%;
+      opacity: 1;
+    }
+  }
+
+  .navLink {
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: $white;
+    text-decoration: none;
+  }
+}

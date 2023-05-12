@@ -1,0 +1,70 @@
+@import "../../styles/colors.module";
+@import "../../styles/breakpoints.module";
+
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 200px 0;
+
+
+  
+  @media screen and (max-width: $phone-L) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+    padding: 100px 0;
+   }
+ 
+
+  .text {
+    width: 60%;
+    color: $white;
+    font-size: 1.5rem;
+    @media screen and (max-width: $phone-L) {
+    width: 100%;
+    font-size: 1rem;
+     }
+
+    
+  }
+  .image {
+    width: 280px;
+    height: 320px;
+    position: relative;
+
+    @media screen and (max-width: $phone-L) {
+    width: 200px;
+    height: 220px;
+     }
+    img {
+      border-radius: 50%;
+      z-index: 2;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.9rem;
+
+  .socialsButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid $white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 3px 10px;
+    background-color: $social-btn;
+    color: $white;
+    text-decoration: none;
+  }
+}
