@@ -5,7 +5,7 @@ import styles from "./Moon.module.scss"
 import CanvasLoader from "../Loader";
 import { RotatingLines } from "react-loader-spinner";
 const Earth = () => {
-  const earth = useGLTF("/moon/scene.gltf");
+  const earth = useGLTF("/moon/scene_moon.glb");
 
   return (
     <mesh>
