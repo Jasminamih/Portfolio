@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import styles from "./Moon.module.scss"
 import CanvasLoader from "../Loader";
-
 import { RotatingLines } from "react-loader-spinner";
 const Earth = () => {
   const earth = useGLTF("/moon/scene_moon.glb");
