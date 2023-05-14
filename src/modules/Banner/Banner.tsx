@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styles from './Banner.module.scss'
-import EarthCanvas from '../../elements/canvas/Moon/Moon'
+import EarthCanvas from '@/elements/canvas/Moon/MoonCanvas'
 
 const Banner: FC = () => {
   return (
@@ -10,7 +10,7 @@ const Banner: FC = () => {
    
     {/* <h3>Code under the stars and reach out for the moon</h3></div> */}
   </div>
-{/* <EarthCanvas/> */}
+<EarthCanvas/>
 </div>)
 }
 
