@@ -28,7 +28,7 @@ const About: FC = () => {
           freelance projects and entry-level positions.
         </p>
         <div className={styles.socials}>
-          <Link
+          <Link rel="preload"
             target="_blank"
             href="/cv.pdf"
             download="cv"
@@ -37,7 +37,7 @@ const About: FC = () => {
             {" "}
             <HiDocumentDownload /> <p> Resume</p>
           </Link>
-          <Link
+          <Link rel="preload"
             href={"https://github.com/Jasminamih"}
             className={styles.socialsButton}
             target="_blank"
@@ -45,7 +45,7 @@ const About: FC = () => {
             {" "}
             <FaGithub /> <p> Github</p>
           </Link>
-          <Link
+          <Link rel="preload"
             href={"https://www.linkedin.com/in/jasmina-mihajloska-170b37148/"}
             className={styles.socialsButton}
             target="_blank"

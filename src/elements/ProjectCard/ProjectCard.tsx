@@ -5,6 +5,7 @@ import { fadeIn, textVariant } from "../../utils/Motion";
 import styles from "./ProjectCard.module.scss";
 import { F_Open_Sans, F_Roboto } from "@/fonts";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import Image from "next/image"
 
 interface Props {
   index: number;
@@ -35,7 +36,7 @@ const ProjectCard: FC<Props> = ({
     >
       <Tilt className={styles.card}>
         <div className={styles.imgWrapper}>
-          <img src={image} alt="project_image" className={styles.img} />
+          <Image fill src={image} alt="project_image" className={styles.img} />
         </div>
 
         <div className={`${styles.text} ${F_Open_Sans.className}`}>

@@ -14,7 +14,7 @@ const NavLink: FC<props> = ({ href, children }) => {
   const { pathname } = useRouter();
   return (
     <div className={`${styles.desktopLinkWrapper} ${F_Ubuntu.className}`}>
-      <Link href={href} className={`${styles.navLink}`}>
+      <Link rel="preload" href={href} className={`${styles.navLink}`}>
         {children}
       </Link>
     </div>

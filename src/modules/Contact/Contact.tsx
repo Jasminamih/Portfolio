@@ -18,11 +18,7 @@ const Contact = () => {
     message: "",
   });
 
-  // template_awlnztz
-
-  // service_nnyj4gi
-
-  // fWv-iWb4wZ3uwHF1C
+ 
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -113,7 +109,7 @@ const Contact = () => {
                     }}
                     className={styles.input}
                     required
-                    id="outlined-required"
+                    id="name"
                     value={form.name}
                     label="Name"
                     onChange={handleChange}
@@ -136,7 +132,7 @@ const Contact = () => {
                     }}
                     className={styles.input}
                     required
-                    id="outlined-required"
+                    id="email"
                     label="E-mail"
                     value={form.email}
                     onChange={handleChange}
@@ -162,7 +158,7 @@ const Contact = () => {
                   rows={5}
                   value={form.message}
                   required
-                  id="outlined-required"
+                  id="message"
                   label="Message"
                   onChange={handleChange}
                   type={"text"}

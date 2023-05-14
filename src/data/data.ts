@@ -19,7 +19,7 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-       image: "nomad.jpg",
+       image: "/nomad.jpg",
       source_code_link: "https://github.com/",
       live_page: "https://www.nomadjobs.kg/",
     },
@@ -41,7 +41,7 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image: "meni.jpg",
+      image: "/meni.jpg",
       source_code_link: "https://github.com/Jasminamih/Menu",
       live_page: "https://phoenix-menu.netlify.app/",
 
@@ -64,7 +64,7 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image: "cloud.jpg",
+      image: "/cloud.jpg",
       source_code_link: "https://github.com/markovskiL/Nomad-Cloud",
       live_page: "https://github.com/",
 
@@ -87,7 +87,7 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image: "coin.jpg",
+      image: "/coin.jpg",
       source_code_link: "https://github.com/Jasminamih/CoinTracker",
       live_page: "https://cointracker-mihajloska.netlify.app/",
 
@@ -108,7 +108,7 @@ const projects = [
         },
       
       ],
-      image: "street.jpg",
+      image: "/street.jpg",
       source_code_link: "https://github.com/",
       live_page: "https://streetartists-mihajloska.netlify.app/",
 
@@ -136,7 +136,7 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image: "portfolio.jpg",
+      image: "/portfolio.jpg",
       source_code_link: "https://github.com/",
       live_page: "https://github.com/",
 

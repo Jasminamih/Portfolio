@@ -18,7 +18,7 @@ export interface NavBtnInterface {
 
   return (
     <div className={`${styles.linkWrapper}  `}>
-      <Link href={href} onClick={onClick} className={`${styles.navLink} `}>
+      <Link rel="preload" href={href} onClick={onClick} className={`${styles.navLink} `}>
         {" "}
         <p className={styles.btnName}>{btnName}</p>{" "}
       </Link>
