@@ -2,7 +2,6 @@ import { Html, useProgress } from "@react-three/drei";
 import { RotatingLines } from "react-loader-spinner";
 
 const CanvasLoader = () => {
-  const { progress } = useProgress();
   return (
     <Html
       as='div'

@@ -5,13 +5,11 @@ import styles from "./Navigation.module.scss";
 import NavLink from "@/elements/NavLink/NavLink";
 import Logo from "@/elements/Logo/Logo";
 import HamburgerBtn from "@/elements/HamburgerBtn/HamburgerBtn";
-import MobileNavLink, {
-  NavBtnInterface,
-} from "@/elements/MobileNavLink/MobileNavLink";
+import MobileNavLink from "@/elements/MobileNavLink/MobileNavLink";
 import { useMediaQuery } from "react-responsive";
 
 const Navigation: FC = () => {
-  const { push, pathname } = useRouter();
+  const { push } = useRouter();
   const [isDesktop, setIsDesktop] = useState<boolean>(false);
 
   const [isMenuOpen, setIsMenuClicked] = useState<boolean>(false);

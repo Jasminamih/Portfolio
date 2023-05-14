@@ -12,7 +12,7 @@ const About: FC = () => {
   return (
     <div id="about" className={styles.about}>
       <div className={styles.image}>
-        <Image src={"/a.jpg"} fill alt="myPhoto" />
+        <Image loading="lazy" src={"/a.jpg"} fill alt="myPhoto" />
       </div>
       <div className={`${styles.text} ${F_Open_Sans.className}`}>
         <h1>About me</h1>

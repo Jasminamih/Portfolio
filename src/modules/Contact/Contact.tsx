@@ -4,11 +4,10 @@ import styles from "./Contact.module.scss";
 import { slideIn } from "../../utils/Motion";
 import emailjs from "@emailjs/browser";
 import { F_Open_Sans, F_Ubuntu } from "@/fonts";
-import { TextField, styled } from "@mui/material";
+import { TextField } from "@mui/material";
 import { ThreeDots } from "react-loader-spinner";
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement>(null);
 
   const [loading, setLoading] = useState(false);
 

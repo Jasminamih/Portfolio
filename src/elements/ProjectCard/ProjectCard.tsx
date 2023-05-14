@@ -36,7 +36,7 @@ const ProjectCard: FC<Props> = ({
     >
       <Tilt className={styles.card}>
         <div className={styles.imgWrapper}>
-          <Image fill src={image} alt="project_image" className={styles.img} />
+          <Image loading="lazy" fill src={image} alt="project_image" className={styles.img} />
         </div>
 
         <div className={`${styles.text} ${F_Open_Sans.className}`}>
