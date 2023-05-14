@@ -10,7 +10,7 @@ const Banner: FC = () => {
    
     {/* <h3>Code under the stars and reach out for the moon</h3></div> */}
   </div>
-<EarthCanvas/>
+{/* <EarthCanvas/> */}
 </div>)
 }
 
