@@ -1,4 +1,4 @@
-import { Baskervville, Inter, Open_Sans, Roboto, Source_Sans_Pro, Ubuntu } from "@next/font/google";
+import { Baskervville, Inter, Open_Sans, Roboto, Source_Sans_Pro, Ubuntu } from "next/font/google";
 
 export const F_Ubuntu = Ubuntu({
   subsets: ["latin"],
