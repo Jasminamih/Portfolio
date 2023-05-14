@@ -3,9 +3,10 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import styles from "./Moon.module.scss"
 import CanvasLoader from "../Loader";
+
 import { RotatingLines } from "react-loader-spinner";
 const Earth = () => {
-  const earth = useGLTF("/moon/scene_moon.glb");
+  const earth = useGLTF("/moon/moon.glb");
 
   return (
     <mesh>
@@ -21,8 +22,8 @@ const Earth = () => {
       <pointLight intensity={0.3} />
       <primitive
         object={earth.scene}
-        scale={2.5}
-        position-y={0}
+        scale={4}
+        position-x={0}
         rotation-y={0}
         castShadow
         receiveShadow
@@ -51,7 +52,7 @@ const EarthCanvas = () => {
         <ambientLight intensity={0.1} />
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
-            autoRotate
+          autoRotate
             enableZoom={false}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
