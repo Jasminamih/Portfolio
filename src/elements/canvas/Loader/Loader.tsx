@@ -4,7 +4,7 @@ import { RotatingLines } from "react-loader-spinner";
 const CanvasLoader = () => {
   return (
     <Html
-      as='div'
+      as="div"
       center
       style={{
         display: "flex",
@@ -13,13 +13,13 @@ const CanvasLoader = () => {
         flexDirection: "column",
       }}
     >
-       <RotatingLines
-  strokeColor="grey"
-  strokeWidth="5"
-  animationDuration="0.75"
-  width="96"
-  visible={true}
-/>
+      <RotatingLines
+        strokeColor="grey"
+        strokeWidth="5"
+        animationDuration="0.10"
+        width="96"
+        visible={true}
+      />
     </Html>
   );
 };

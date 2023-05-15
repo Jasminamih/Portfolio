@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./Contact.module.scss";
 import { slideIn } from "../../utils/Motion";
 import emailjs from "@emailjs/browser";
@@ -8,7 +8,6 @@ import { TextField } from "@mui/material";
 import { ThreeDots } from "react-loader-spinner";
 
 const Contact = () => {
-
   const [loading, setLoading] = useState(false);
 
   const [form, setForm] = useState({
@@ -16,8 +15,6 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
- 
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -90,7 +87,6 @@ const Contact = () => {
         <div className={`${styles.contactWrapper} ${F_Ubuntu.className}`}>
           <div className={styles.contactOptionsContainer}>
             <div className={styles.contactForm}>
-
               <form onSubmit={handleSubmit}>
                 <div className={styles.inputsWrapper}>
                   <TextField

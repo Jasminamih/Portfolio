@@ -1,8 +1,5 @@
 import React, { FC } from "react";
-import { motion } from "framer-motion";
-
 import projects from "../../data/data";
-import { fadeIn, textVariant } from "../../utils/Motion";
 import ProjectCard from "../../elements/ProjectCard/ProjectCard";
 import styles from "./Projects.module.scss";
 import { F_Open_Sans } from "@/fonts";

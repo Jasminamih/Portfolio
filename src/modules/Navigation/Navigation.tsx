@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { FC, useEffect, useState } from "react";
 import styles from "./Navigation.module.scss";
@@ -15,7 +14,6 @@ const Navigation: FC = () => {
   const [isMenuOpen, setIsMenuClicked] = useState<boolean>(false);
 
   const handleClick = () => {
-
     setIsMenuClicked((prev) => !prev);
   };
 

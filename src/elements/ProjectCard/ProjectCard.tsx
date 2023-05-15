@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import { fadeIn, textVariant } from "../../utils/Motion";
+import { fadeIn } from "../../utils/Motion";
 import styles from "./ProjectCard.module.scss";
 import { F_Open_Sans, F_Roboto } from "@/fonts";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
@@ -36,7 +36,7 @@ const ProjectCard: FC<Props> = ({
     >
       <Tilt className={styles.card}>
         <div className={styles.imgWrapper}>
-          <Image loading="lazy" fill src={image} alt="project_image" className={styles.img} />
+          <Image priority fill src={image} alt="project_image" className={styles.img} />
         </div>
 
         <div className={`${styles.text} ${F_Open_Sans.className}`}>

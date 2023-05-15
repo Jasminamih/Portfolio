@@ -1,9 +1,7 @@
 import * as THREE from "three";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 
 const ThreeScene = () => {
-  const [isLoaded, setIsLoaded] = useState(true);
-
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -45,7 +43,6 @@ const ThreeScene = () => {
       scene.add(star);
     }
 
-    // Render the scene and animate the stars
     function animate() {
       requestAnimationFrame(animate);
       starField.rotation.y += 0.001;
@@ -66,7 +63,7 @@ const ThreeScene = () => {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     }
-    window.addEventListener("resize", onWindowResize, false);
+    window.addEventListener("resize", onWindowResize, { passive: true });
 
     return () => {
       window.removeEventListener("resize", onWindowResize, false);
@@ -77,11 +74,7 @@ const ThreeScene = () => {
 
   return (
     <div id="three-container">
-      {isLoaded === true ? (
-        <div ref={mountRef} />
-      ) : (
-        <h1 style={{ color: "black", fontSize: "100px" }}>heloo</h1>
-      )}
+      <div ref={mountRef} />
     </div>
   );
 };

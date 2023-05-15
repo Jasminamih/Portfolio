@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import styles from "./About.module.scss";
 import Image from "next/image";
-import { F_Open_Sans, F_Roboto } from "@/fonts";
-
+import { F_Open_Sans } from "@/fonts";
 import { HiDocumentDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -12,11 +11,11 @@ const About: FC = () => {
   return (
     <div id="about" className={styles.about}>
       <div className={styles.image}>
-        <Image loading="lazy" src={"/a.jpg"} fill alt="myPhoto" />
+        <Image priority src={"/a.jpg"} fill alt="myPhoto" />
       </div>
       <div className={`${styles.text} ${F_Open_Sans.className}`}>
         <h1 className={styles.title}>About me</h1>
-        <p  className={styles.desc}>
+        <p className={styles.desc}>
           I am a junior front-end developer with a strong passion for creating
           visually appealing and user-friendly websites. Recently I have
           completed the Front end Academy at Brainster. I am proficient in HTML,
@@ -28,7 +27,8 @@ const About: FC = () => {
           freelance projects and entry-level positions.
         </p>
         <div className={styles.socials}>
-          <Link rel="preload"
+          <Link
+            rel="preload"
             target="_blank"
             href="/cv.pdf"
             download="cv"
@@ -37,7 +37,8 @@ const About: FC = () => {
             {" "}
             <HiDocumentDownload /> <p> Resume</p>
           </Link>
-          <Link rel="preload"
+          <Link
+            rel="preload"
             href={"https://github.com/Jasminamih"}
             className={styles.socialsButton}
             target="_blank"
@@ -45,7 +46,8 @@ const About: FC = () => {
             {" "}
             <FaGithub /> <p> Github</p>
           </Link>
-          <Link rel="preload"
+          <Link
+            rel="preload"
             href={"https://www.linkedin.com/in/jasmina-mihajloska-170b37148/"}
             className={styles.socialsButton}
             target="_blank"

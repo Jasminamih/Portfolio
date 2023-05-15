@@ -5,7 +5,7 @@ import Image from "next/image";
 const Logo: FC = () => {
   return (
     <div className={styles.logo}>
-      <Image src="/logoJM.png" alt="logo" fill />{" "}
+      <Image priority src="/logoJM.png" alt="logo" fill />{" "}
     </div>
   );
 };
