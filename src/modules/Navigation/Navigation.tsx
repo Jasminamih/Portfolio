@@ -7,18 +7,16 @@ import Logo from "@/elements/Logo/Logo";
 import HamburgerBtn from "@/elements/HamburgerBtn/HamburgerBtn";
 import MobileNavLink from "@/elements/MobileNavLink/MobileNavLink";
 import { useMediaQuery } from "react-responsive";
+import { F_Open_Sans } from "@/fonts";
 
 const Navigation: FC = () => {
   const { push } = useRouter();
   const [isDesktop, setIsDesktop] = useState<boolean>(false);
-
   const [isMenuOpen, setIsMenuClicked] = useState<boolean>(false);
 
   const handleClick = () => {
-    console.log(isMenuOpen);
 
     setIsMenuClicked((prev) => !prev);
-    console.log(isMenuOpen);
   };
 
   const matches = useMediaQuery({ minWidth: 800 });
@@ -27,7 +25,7 @@ const Navigation: FC = () => {
   }, [matches]);
   return (
     <>
-      <div className={`${styles.desktopNavWrapper}`}>
+      <div className={`${styles.desktopNavWrapper} ${F_Open_Sans.className}`}>
         <div className={styles.logoWrapper} onClick={() => push("/")}>
           <Logo />
         </div>

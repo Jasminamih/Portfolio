@@ -15,8 +15,8 @@ const About: FC = () => {
         <Image loading="lazy" src={"/a.jpg"} fill alt="myPhoto" />
       </div>
       <div className={`${styles.text} ${F_Open_Sans.className}`}>
-        <h1>About me</h1>
-        <p>
+        <h1 className={styles.title}>About me</h1>
+        <p  className={styles.desc}>
           I am a junior front-end developer with a strong passion for creating
           visually appealing and user-friendly websites. Recently I have
           completed the Front end Academy at Brainster. I am proficient in HTML,

@@ -9,25 +9,51 @@
   padding-top: 100px;
   color:$white;
 
-  @media screen and (max-width: $phone-L) {
+  @media screen and (max-width: $laptop-S) {
    
     width: 90%;
    }
-}
+
 
 .cards {
   margin: 3rem 0;
+  gap: 2rem;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.text {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
-  @media screen and (max-width: $phone-L) {
-   
-    width: 100%;
-   }
+
+  .text {
+    width: 90%;
+    margin: 0 auto;
+     color: $white;
+
+    @media screen and (max-width: $tablet-XL) {
+      width: 90%;
+    }
+
+    .title {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2.5rem;
+
+      @media screen and (max-width: $tablet-XL) {
+        font-size: 2rem;
+      }
+    }
+
+    .desc {
+      font-size: 1.5rem;
+
+      @media screen and (max-width: $laptop-XS) {
+        font-size: 1.3rem;
+      }
+      @media screen and (max-width: $tablet-XL) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
 }
