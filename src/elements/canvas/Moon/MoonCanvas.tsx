@@ -21,7 +21,6 @@ const EarthCanvas = () => {
             position: [-4, 9, 6],
           }}
         >
-          <Suspense fallback={<CanvasLoader />}>
             <OrbitControls
             autoRotate
               enableZoom={false}
@@ -30,7 +29,6 @@ const EarthCanvas = () => {
             />
             <Stage environment={"dawn"} intensity={0.2}>
 <Moon/>            </Stage>
-          </Suspense>
         </Canvas>
       </div>
     );
