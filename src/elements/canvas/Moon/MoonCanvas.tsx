@@ -1,16 +1,16 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload} from "@react-three/drei";
+import { OrbitControls, Preload, Stage} from "@react-three/drei";
 import styles from "./Moon.module.scss"
 import CanvasLoader from "../Loader/Loader";
-import Earth from "./Moon";
+import Model from "@/elements/Moon";
+
 const EarthCanvas = () => {
     return (
       <div className={styles.moonWrapper}
        
       >
         <Canvas
-         className={styles.moon}
           frameloop="demand"
           dpr={[1, 2]}
           gl={{ preserveDrawingBuffer: true }}
@@ -29,7 +29,9 @@ const EarthCanvas = () => {
               maxPolarAngle={Math.PI / 2}
               minPolarAngle={Math.PI / 2}
             />
-            <Earth />
+            <Stage environment={"dawn"} intensity={0.2}>
+            <Model />
+            </Stage>
             <Preload  all />
           </Suspense>
         </Canvas>
