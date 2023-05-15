@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, Stage} from "@react-three/drei";
+import { OrbitControls, Stage} from "@react-three/drei";
 import styles from "./Moon.module.scss"
 import CanvasLoader from "../Loader/Loader";
-import Model from "@/elements/Moon";
+import Moon from "./Moon";
 
 const EarthCanvas = () => {
     return (
@@ -21,7 +21,6 @@ const EarthCanvas = () => {
             position: [-4, 9, 6],
           }}
         >
-          <ambientLight intensity={0.1} />
           <Suspense fallback={<CanvasLoader />}>
             <OrbitControls
             autoRotate
@@ -30,9 +29,7 @@ const EarthCanvas = () => {
               minPolarAngle={Math.PI / 2}
             />
             <Stage environment={"dawn"} intensity={0.2}>
-            <Model />
-            </Stage>
-            <Preload  all />
+<Moon/>            </Stage>
           </Suspense>
         </Canvas>
       </div>
