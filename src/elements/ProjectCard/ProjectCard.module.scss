@@ -5,10 +5,9 @@
   width: 33.333%;
   z-index: 2;
   position: relative;
-
   max-width: 470px;
 
-  @media screen and (max-width: $laptop-L) {
+  @media screen and (max-width: $laptop-S) {
     width: 50%;
   }
 
@@ -30,6 +29,7 @@
 
   .card {
     padding: 1.2rem;
+    margin: 1.2rem;
     border: 1px solid$black;
     color: $white;
     border-radius: 10px;

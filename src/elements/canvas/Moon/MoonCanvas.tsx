@@ -3,6 +3,7 @@ import {Canvas } from "@react-three/fiber";
 import {OrbitControls, Stage} from "@react-three/drei";
 import styles from "./Moon.module.scss"
 import CanvasLoader from "../Loader/Loader";
+import { Model } from "./Moon";
 // import Moon from "./Moon";
 
 const EarthCanvas = () => {
@@ -28,7 +29,7 @@ const EarthCanvas = () => {
               maxPolarAngle={Math.PI / 2}
               minPolarAngle={Math.PI / 2}
             />
-            {/* <Stage environment={"city"} intensity={0.2}><Moon/></Stage> */}
+            <Stage environment={"city"} intensity={0.1}><Model/></Stage>
           </Suspense>
         </Canvas>
       </div>

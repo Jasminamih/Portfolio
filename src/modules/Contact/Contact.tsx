@@ -23,6 +23,8 @@ const Contact = () => {
   };
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    
+    
     setLoading(true);
 
     emailjs
@@ -55,7 +57,8 @@ const Contact = () => {
 
           alert("Ahh, something went wrong. Please try again.");
         }
-      );
+      )
+      
   };
 
   const [isVisible, setIsVisible] = useState(false);
@@ -69,7 +72,7 @@ const Contact = () => {
       }
     }
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll, false);
   }, []);
 
   return (
