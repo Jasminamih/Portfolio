@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const About: FC = () => {
   return (
-    <div id="about" className={styles.about}>
+    <div id="About" className={styles.about}>
       <div className={styles.image}>
         <Image priority src={"/a.jpg"} fill alt="myPhoto" />
       </div>

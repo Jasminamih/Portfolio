@@ -5,11 +5,26 @@ import MobileNavLink from "@/elements/MobileNavLink/MobileNavLink";
 
 const MobileNavigation: FC = () => {
   const [isMenuOpen, setIsMenuClicked] = useState<boolean>(false);
+  const [isActive, setIsActive]=useState("Home")
+
 
   const handleClick = () => {
     setIsMenuClicked((prev) => !prev);
   };
 
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    setIsMenuClicked((prev) => !prev);
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    setIsActive(targetId)
+
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <div>
       <HamburgerBtn isMenuOpen={isMenuOpen} handleClick={handleClick} />
@@ -20,27 +35,30 @@ const MobileNavigation: FC = () => {
         <div className={styles.linksWrapperM}>
           <MobileNavLink
             btnName={"Home"}
-            href={"/"}
-            onClick={handleClick}
-            path={"/"}
+            href={"#Home"}
+            onScroll={handleScroll}
+            isActive={isActive}
           />
           <MobileNavLink
             btnName={"About"}
-            href={"#about"}
-            onClick={handleClick}
-            path={"/#about"}
+            href={"#About"}
+            onScroll={handleScroll}
+            isActive={isActive}
+
           />
           <MobileNavLink
             btnName={"Projects"}
-            href={"#projects"}
-            onClick={handleClick}
-            path={"/#projects"}
+            href={"#Projects"}
+            onScroll={handleScroll}
+            isActive={isActive}
+
           />
           <MobileNavLink
             btnName={"Contact"}
-            href={"#contact"}
-            onClick={handleClick}
-            path={"/#contact"}
+            href={"#Contact"}
+            onScroll={handleScroll}
+            isActive={isActive}
+
           />
         </div>
       </div>

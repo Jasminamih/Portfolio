@@ -6,8 +6,9 @@ import { useRouter } from "next/router";
 interface props {
   btnName: string;
   href: string;
-  onClick: () => void;  
-  path:string
+  onScroll: (e:any) => void;  
+  isActive:string
+
 
 }
 
@@ -17,7 +18,7 @@ export interface NavBtnInterface {
 
 }
 
-const MobileNavLink: FC<props> = ({ btnName, href, onClick,path}) => {
+const MobileNavLink: FC<props> = ({ btnName, href, onScroll ,isActive}) => {
   const router = useRouter();
  
   return (
@@ -25,8 +26,8 @@ const MobileNavLink: FC<props> = ({ btnName, href, onClick,path}) => {
       <Link
         rel="preload"
         href={href}
-        onClick={onClick}
-        className={`${styles.navLink} ${router.asPath == path ? styles.activeLink : "" }`}
+        onClick={onScroll}
+        className={`${styles.navLink} ${isActive == btnName ? styles.activeLink : "" }`}
       >
         <p className={styles.btnName}>{btnName}</p>{" "}
       </Link>

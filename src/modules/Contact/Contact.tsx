@@ -65,7 +65,7 @@ const Contact = () => {
 
   useEffect(() => {
     function handleScroll() {
-      const element = document.getElementById("contact");
+      const element = document.getElementById("Contact");
       const { top } = element!.getBoundingClientRect();
       if (top < window.innerHeight) {
         setIsVisible(true);
@@ -76,7 +76,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div id="contact" className={`${styles.contact} ${F_Open_Sans.className}`}>
+    <div id="Contact" className={`${styles.contact} ${F_Open_Sans.className}`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         initial="hidden"

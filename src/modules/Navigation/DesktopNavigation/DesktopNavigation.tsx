@@ -1,18 +1,34 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import styles from './DesktopNavigation.module.scss'
 import NavLink from '@/elements/NavLink/NavLink'
 
 const DesktopNavigation: FC = () => {
+
+const [isActive, setIsActive]=useState("Home")
+
+const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    console.log(elem)
+    setIsActive(targetId)
+console.log(targetId)
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
 
       <div className={styles.linksWrapper}>
-        <NavLink href="#home"> Home</NavLink>
+        <NavLink name='Home' href="#Home" onScroll={handleScroll} isActive={isActive}/>
 
-        <NavLink href="#about">About</NavLink>
+        <NavLink name='About' href="#About" onScroll={handleScroll}isActive={isActive} />
 
-        <NavLink href="#projects">Projects</NavLink>
+        <NavLink name='Projects' href="#Projects" onScroll={handleScroll} isActive={isActive} />
 
-        <NavLink href="#contact">Contact</NavLink>
+        <NavLink name='Contact' href="#Contact" onScroll={handleScroll} isActive={isActive}/>
         </div>  )
 }
 

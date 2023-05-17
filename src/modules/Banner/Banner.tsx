@@ -7,7 +7,7 @@ import MoonCanvas from "@/elements/canvas/Moon/MoonCanvas";
 const Banner: FC = () => {
   return (
     <div
-      id="home"
+      id="Home"
       className={`${styles.bannerWrapper} ${F_Open_Sans.className}`}
     >
       <div>

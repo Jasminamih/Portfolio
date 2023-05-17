@@ -7,7 +7,7 @@ import { F_Open_Sans } from "@/fonts";
 const Works: FC = () => {
   return (
     <div
-      id={"projects"}
+      id={"Projects"}
       className={`${styles.projects}  ${F_Open_Sans.className}`}
     >
       <div className={styles.text}>

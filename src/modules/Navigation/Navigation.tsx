@@ -23,6 +23,10 @@ const MobileNavigation = dynamic(
 const Navigation: FC = () => {
   const [isDesktop, setIsDesktop] = useState<boolean>(false);
 
+
+
+
+
   // const handleClick = () => {
   //   setIsMenuClicked((prev) => !prev);
   // };
