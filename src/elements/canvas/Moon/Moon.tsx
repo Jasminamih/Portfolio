@@ -21,11 +21,15 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function Model(props: JSX.IntrinsicElements['group']) {
+
+type ModelProps = JSX.IntrinsicElements['group'] & {
+  isMobile: boolean
+}
+export function Model(props:ModelProps) {
   const { nodes, materials } = useGLTF('/moon-transformed.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
-      <group position={[0.22, -0.19, 0.17]} rotation={[-1.72, -0.22, 0.01]} scale={0.43}>
+      <group position={[0.22, -0.19, 0.17]} rotation={[-1.72, -0.22, 0.01]} scale={props.isMobile ? 0.2: 0.4}>
         <mesh geometry={nodes.Object_3.geometry} material={materials['Material.001']} position={[-0.45, -1.65, -0.03]} />
       </group>
     </group>
