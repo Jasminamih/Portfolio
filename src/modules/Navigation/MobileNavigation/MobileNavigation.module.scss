@@ -1,0 +1,43 @@
+@import "../../../styles/breakpoints.module";
+@import "../../../styles/colors.module";
+
+.slidingNav {
+  position: absolute;
+  border-left: 1px solid rgba(255, 255, 255, 0.234);
+  top: 0;
+  right: 0;
+  z-index: 1200;
+  width: 0;
+  max-width: 500px;
+  height: 100vh;
+  transition: 0.5s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+  flex-direction: column;
+  background-color: #090939;
+  gap: 0.5rem;
+  display: flex;
+
+  &.clicked {
+    opacity: 1;
+    width: 100%;
+    .navLink {
+      height: 75px;
+      opacity: 1;
+    }
+  }
+  .linksWrapperM {
+    margin: 4rem 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  hr {
+    margin: 2rem 0;
+  }
+  .userLinksWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+}

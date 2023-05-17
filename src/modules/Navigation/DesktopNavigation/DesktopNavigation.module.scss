@@ -1,0 +1,11 @@
+@import "../../../styles/breakpoints.module";
+
+.linksWrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @media screen and (max-width: $phone-L) {
+    display: none;
+  }
+}
