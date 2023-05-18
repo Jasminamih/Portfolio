@@ -60,6 +60,8 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
+    
+
       .input {
         width: 48.5%;
         margin: 0.7rem 0;
@@ -69,6 +71,9 @@
 
         input {
           color: $white;
+          -webkit-text-fill-color: #fff !important;
+          -webkit-background-clip: text !important;
+          background-clip:  text !important;
         }
       }
     }
@@ -110,3 +115,5 @@
     }
   }
 }
+
+

@@ -6,9 +6,14 @@ import emailjs from "@emailjs/browser";
 import { F_Open_Sans, F_Ubuntu } from "@/fonts";
 import { TextField } from "@mui/material";
 import { ThreeDots } from "react-loader-spinner";
+import SuccessMessage from "@/elements/SuccessMessage/SuccessMessage";
+import ErrorMessage from "@/elements/ErrorMessage/ErrorMessage";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
@@ -23,8 +28,7 @@ const Contact = () => {
   };
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    
-    
+
     setLoading(true);
 
     emailjs
@@ -44,8 +48,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
+          setSuccess(true);
           setForm({
             name: "",
             email: "",
@@ -55,13 +58,10 @@ const Contact = () => {
         (error: any) => {
           setLoading(false);
 
-          alert("Ahh, something went wrong. Please try again.");
+          setError(true);
         }
-      )
-      
+      );
   };
-
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
@@ -76,7 +76,8 @@ const Contact = () => {
   }, []);
 
   return (
-    <div id="Contact" className={`${styles.contact} ${F_Open_Sans.className}`}>
+<>    {success ? <SuccessMessage/>: null}
+{error? <ErrorMessage/>: null}    <div id="Contact" className={`${styles.contact} ${F_Open_Sans.className}`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         initial="hidden"
@@ -187,6 +188,7 @@ const Contact = () => {
         </div>
       </motion.div>
     </div>
+    </>
   );
 };
 
