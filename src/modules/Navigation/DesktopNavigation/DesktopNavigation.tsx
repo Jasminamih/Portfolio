@@ -8,6 +8,8 @@ const [isActive, setIsActive]=useState("Home")
 
 const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
+    { passive: true }
+
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);

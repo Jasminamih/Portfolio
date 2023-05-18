@@ -15,6 +15,8 @@ const MobileNavigation: FC = () => {
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
+    { passive: true }
+
     setIsMenuClicked((prev) => !prev);
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");

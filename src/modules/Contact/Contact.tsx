@@ -6,8 +6,20 @@ import emailjs from "@emailjs/browser";
 import { F_Open_Sans, F_Ubuntu } from "@/fonts";
 import { TextField } from "@mui/material";
 import { ThreeDots } from "react-loader-spinner";
-import SuccessMessage from "@/elements/SuccessMessage/SuccessMessage";
-import ErrorMessage from "@/elements/ErrorMessage/ErrorMessage";
+import dynamic from "next/dynamic";
+
+const ErrorMessage = dynamic(
+  () => import("../../elements/ErrorMessage/ErrorMessage"),
+  {
+    ssr: false,
+  }
+);
+const SuccessMessage = dynamic(
+  () => import("../../elements/SuccessMessage/SuccessMessage"),
+  {
+    ssr: false,
+  }
+);
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -28,6 +40,7 @@ const Contact = () => {
   };
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    { passive: true }
 
     setLoading(true);
 
