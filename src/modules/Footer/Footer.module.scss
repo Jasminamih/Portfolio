@@ -1,0 +1,16 @@
+@import "../../styles/breakpoints.module";
+
+
+
+.footer{
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(10, 0, 0, 0.192);
+    color: white;
+    font-size: 0.7rem;
+
+    @media screen and (max-width:$phone-L) {
+        font-size: 0.5rem;
+
+    }
+}

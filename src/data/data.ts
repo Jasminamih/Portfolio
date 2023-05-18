@@ -20,7 +20,7 @@ const projects = [
         },
       ],
        image: "/nomad.webp",
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/markovskiL/NomadJobs",
       live_page: "https://www.nomadjobs.kg/",
     },
     {
@@ -136,8 +136,8 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image: "/portfolio.jpg",
-      source_code_link: "https://github.com/",
+      image: "/portfolio.webp",
+      source_code_link: "https://github.com/Jasminamih/Portfolio",
       live_page: "https://github.com/",
 
     },

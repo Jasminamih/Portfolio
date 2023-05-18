@@ -14,7 +14,6 @@ name:string;
 const NavLink: FC<props> = ({ href,name, onScroll,isActive }) => {
 
   
-console.log(isActive)
   return (
     <div className={`${styles.desktopLinkWrapper} ${F_Ubuntu.className}`}>
       <Link onClick={onScroll} rel="preload" href={href} className={`${styles.navLink} ${isActive === name ? styles.active : ''}`}>

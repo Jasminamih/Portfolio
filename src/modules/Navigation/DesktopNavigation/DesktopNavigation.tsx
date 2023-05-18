@@ -11,10 +11,8 @@ const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
-    console.log(elem)
     setIsActive(targetId)
-console.log(targetId)
-    elem?.scrollIntoView({
+   elem?.scrollIntoView({
       behavior: "smooth",
     });
   };

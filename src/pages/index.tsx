@@ -5,6 +5,7 @@ import ThreeScene from "@/elements/canvas/Stars/stars";
 import About from "@/modules/About/About";
 import Banner from "../modules/Banner/Banner";
 import Navigation from "@/modules/Navigation/Navigation";
+import Footer from "@/modules/Footer/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <About />
         <Projects />
         <Contact />
+        <Footer/>
         <ThreeScene />
       </main>
     </>
