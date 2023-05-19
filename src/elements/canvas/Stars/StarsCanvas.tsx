@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import React, { useRef, useEffect } from "react";
-import styles from "./Stars.module.scss";
+import styles from "./StarsCanvas.module.scss";
 
 const StarsCanvas = () => {
   const mountRef = useRef<HTMLDivElement>(null);
