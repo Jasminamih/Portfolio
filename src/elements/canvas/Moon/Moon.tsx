@@ -7,33 +7,40 @@ Source: https://sketchfab.com/3d-models/la-luna-viaje-virtual-guiado-3d-vr-f2cda
 Title: La Luna / Viaje Virtual Guiado / 3D /  VR
 */
 
-import * as THREE from 'three'
-import React from 'react'
-import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+import * as THREE from "three";
+import React from "react";
+import { useGLTF } from "@react-three/drei";
+import { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
   nodes: {
-    Object_3: THREE.Mesh
-  }
+    Object_3: THREE.Mesh;
+  };
   materials: {
-    ['Material.001']: THREE.MeshStandardMaterial
-  }
-}
+    ["Material.001"]: THREE.MeshStandardMaterial;
+  };
+};
 
-
-type ModelProps = JSX.IntrinsicElements['group'] & {
-  isMobile: boolean
-}
-export function Model(props:ModelProps) {
-  const { nodes, materials } = useGLTF('/moon-transformed.glb') as GLTFResult
+type ModelProps = JSX.IntrinsicElements["group"] & {
+  isMobile: boolean;
+};
+export function Model(props: ModelProps) {
+  const { nodes, materials } = useGLTF("/moon-transformed.glb") as GLTFResult;
   return (
     <group {...props} dispose={null}>
-      <group position={[0.22, -0.19, 0.17]} rotation={[-1.72, -0.22, 0.01]} scale={props.isMobile ? 0.2: 0.4}>
-        <mesh geometry={nodes.Object_3.geometry} material={materials['Material.001']} position={[-0.45, -1.65, -0.03]} />
+      <group
+        position={[0.22, -0.19, 0.17]}
+        rotation={[-1.72, -0.22, 0.01]}
+        scale={props.isMobile ? 0.2 : 0.4}
+      >
+        <mesh
+          geometry={nodes.Object_3.geometry}
+          material={materials["Material.001"]}
+          position={[-0.45, -1.65, -0.03]}
+        />
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/moon-transformed.glb')
+useGLTF.preload("/moon-transformed.glb");

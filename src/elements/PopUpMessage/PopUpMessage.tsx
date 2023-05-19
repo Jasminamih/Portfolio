@@ -1,8 +1,14 @@
 import React, { FC, useState } from "react";
-import styles from "./ErrorMessage.module.scss";
+import styles from "./PopUpMessage.module.scss"
 import { F_Open_Sans } from "@/fonts";
 
-const ErrorMessage: FC = () => {
+interface Props{
+  title:string;
+  text:string;
+}
+
+
+const PopUpMessage: FC<Props> = ({title, text}) => {
   const [isVisible, setIsVisible] = useState(true);
 
   const hidePopup = () => {
@@ -20,9 +26,9 @@ const ErrorMessage: FC = () => {
             <p className={styles.closeBtn} onClick={hidePopup}>
               x
             </p>
-            <h2>Sorry</h2>
+            <h2>{title}</h2>
             <p>
-           Something went wrong. Please try again
+              {text}
             </p>
           </div>
         </div>
@@ -31,4 +37,4 @@ const ErrorMessage: FC = () => {
   );
 };
 
-export default ErrorMessage;
+export default PopUpMessage;

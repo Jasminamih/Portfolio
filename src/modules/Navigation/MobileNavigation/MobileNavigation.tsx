@@ -5,7 +5,6 @@ import MobileNavLink from "@/elements/MobileNavLink/MobileNavLink";
 
 const MobileNavigation: FC = () => {
   const [isMenuOpen, setIsMenuClicked] = useState<boolean>(false);
-  const [isActive, setIsActive]=useState("Home")
 
 
   const handleClick = () => {
@@ -15,13 +14,11 @@ const MobileNavigation: FC = () => {
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    { passive: true }
 
     setIsMenuClicked((prev) => !prev);
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
-    setIsActive(targetId)
 
     elem?.scrollIntoView({
       behavior: "smooth",
@@ -39,27 +36,23 @@ const MobileNavigation: FC = () => {
             btnName={"Home"}
             href={"#Home"}
             onScroll={handleScroll}
-            isActive={isActive}
           />
           <MobileNavLink
             btnName={"About"}
             href={"#About"}
             onScroll={handleScroll}
-            isActive={isActive}
 
           />
           <MobileNavLink
             btnName={"Projects"}
             href={"#Projects"}
             onScroll={handleScroll}
-            isActive={isActive}
 
           />
           <MobileNavLink
             btnName={"Contact"}
             href={"#Contact"}
             onScroll={handleScroll}
-            isActive={isActive}
 
           />
         </div>

@@ -1,4 +1,4 @@
-import { Baskervville, Inter, Open_Sans, Roboto, Source_Sans_Pro, Ubuntu } from "next/font/google";
+import { Open_Sans, Roboto, Ubuntu } from "next/font/google";
 
 export const F_Ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -12,19 +12,8 @@ export const F_Roboto = Roboto({
   display: "swap",
 });
 
-export const F_Inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const F_Open_Sans = Open_Sans({
   subsets: ["latin"],
-  weight: [ "300", "400", "600"],
-  display: "swap",
-});
-
-export const F_Baskervville = Baskervville({
-  subsets: ["latin"],
-  weight: [ "400" ],
+  weight: ["300", "400", "600"],
   display: "swap",
 });

@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import styles from "./Banner.module.scss";
-import EarthCanvas from "@/elements/canvas/Moon/MoonCanvas";
 import { F_Open_Sans } from "@/fonts";
 import MoonCanvas from "@/elements/canvas/Moon/MoonCanvas";
 
@@ -15,7 +14,8 @@ const Banner: FC = () => {
         <h1>Jasmina Mihajloska</h1>
         <h2>A Front-End developer </h2>
       </div>
-<MoonCanvas/>    </div>
+      <MoonCanvas />{" "}
+    </div>
   );
 };
 

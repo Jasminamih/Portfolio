@@ -10,16 +10,11 @@ body {
   overflow-x: hidden;
 }
 
-
-.gradient{
- background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(6,6,59,1) 66%, rgba(9,9,57,1) 73%);
+.gradient {
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(6, 6, 59, 1) 66%,
+    rgba(9, 9, 57, 1) 73%
+  );
 }
-
-
-
-
-
-
-
-
-

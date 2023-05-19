@@ -8,14 +8,8 @@ import { TextField } from "@mui/material";
 import { ThreeDots } from "react-loader-spinner";
 import dynamic from "next/dynamic";
 
-const ErrorMessage = dynamic(
-  () => import("../../elements/ErrorMessage/ErrorMessage"),
-  {
-    ssr: false,
-  }
-);
-const SuccessMessage = dynamic(
-  () => import("../../elements/SuccessMessage/SuccessMessage"),
+const PopUpMessage = dynamic(
+  () => import("../../elements/PopUpMessage/PopUpMessage"),
   {
     ssr: false,
   }
@@ -40,7 +34,9 @@ const Contact = () => {
   };
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    { passive: true }
+    {
+      passive: true;
+    }
 
     setLoading(true);
 
@@ -89,23 +85,87 @@ const Contact = () => {
   }, []);
 
   return (
-<>    {success ? <SuccessMessage/>: null}
-{error? <ErrorMessage/>: null}    <div id="Contact" className={`${styles.contact} ${F_Open_Sans.className}`}>
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        initial="hidden"
-        animate={isVisible ? "show" : "hidden"}
-        className={styles.contactPage}
+    <>
+      {" "}
+      {success ? (
+        <PopUpMessage
+          title={"Thank you for reaching out to me!"}
+          text={
+            "I appreciate your interest and taking the time to connect. Your message has been received, and I will make sure to respond as soon as possible."
+          }
+        />
+      ) : null}
+      {error ? (
+        <PopUpMessage
+          title={"Sorry"}
+          text={"Something went wrong. Please try again"}
+        />
+      ) : null}{" "}
+      <div
+        id="Contact"
+        className={`${styles.contact} ${F_Open_Sans.className}`}
       >
-        <div className={styles.contactText}>
-          <p className={styles.sectionSubText}>Get in touch</p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
-        </div>
-        <div className={`${styles.contactWrapper} ${F_Ubuntu.className}`}>
-          <div className={styles.contactOptionsContainer}>
-            <div className={styles.contactForm}>
-              <form onSubmit={handleSubmit}>
-                <div className={styles.inputsWrapper}>
+        <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}
+          initial="hidden"
+          animate={isVisible ? "show" : "hidden"}
+          className={styles.contactPage}
+        >
+          <div className={styles.contactText}>
+            <p className={styles.sectionSubText}>Get in touch</p>
+            <h3 className={styles.sectionHeadText}>Contact.</h3>
+          </div>
+          <div className={`${styles.contactWrapper} ${F_Ubuntu.className}`}>
+            <div className={styles.contactOptionsContainer}>
+              <div className={styles.contactForm}>
+                <form onSubmit={handleSubmit}>
+                  <div className={styles.inputsWrapper}>
+                    <TextField
+                      sx={{
+                        label: { color: "white" },
+                        fieldset: { borderColor: "white" },
+                        "& .MuiOutlinedInput-root": {
+                          "&.Mui-focused fieldset": {
+                            borderColor: "white",
+                          },
+                          "&:hover fieldset": {
+                            borderColor: "white",
+                          },
+                        },
+                      }}
+                      className={styles.input}
+                      required
+                      id="name"
+                      value={form.name}
+                      label="Name"
+                      onChange={handleChange}
+                      type={"text"}
+                      name="name"
+                    />
+
+                    <TextField
+                      sx={{
+                        label: { color: "white" },
+                        fieldset: { borderColor: "white" },
+                        "& .MuiOutlinedInput-root": {
+                          "&.Mui-focused fieldset": {
+                            borderColor: "white",
+                          },
+                          "&:hover fieldset": {
+                            borderColor: "white",
+                          },
+                        },
+                      }}
+                      className={styles.input}
+                      required
+                      id="email"
+                      label="E-mail"
+                      value={form.email}
+                      onChange={handleChange}
+                      type={"email"}
+                      name="email"
+                    />
+                  </div>
                   <TextField
                     sx={{
                       label: { color: "white" },
@@ -119,88 +179,42 @@ const Contact = () => {
                         },
                       },
                     }}
-                    className={styles.input}
+                    className={styles.textArea}
+                    multiline
+                    rows={5}
+                    value={form.message}
                     required
-                    id="name"
-                    value={form.name}
-                    label="Name"
+                    id="message"
+                    label="Message"
                     onChange={handleChange}
                     type={"text"}
-                    name="name"
+                    name="message"
                   />
 
-                  <TextField
-                    sx={{
-                      label: { color: "white" },
-                      fieldset: { borderColor: "white" },
-                      "& .MuiOutlinedInput-root": {
-                        "&.Mui-focused fieldset": {
-                          borderColor: "white",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "white",
-                        },
-                      },
-                    }}
-                    className={styles.input}
-                    required
-                    id="email"
-                    label="E-mail"
-                    value={form.email}
-                    onChange={handleChange}
-                    type={"email"}
-                    name="email"
-                  />
-                </div>
-                <TextField
-                  sx={{
-                    label: { color: "white" },
-                    fieldset: { borderColor: "white" },
-                    "& .MuiOutlinedInput-root": {
-                      "&.Mui-focused fieldset": {
-                        borderColor: "white",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "white",
-                      },
-                    },
-                  }}
-                  className={styles.textArea}
-                  multiline
-                  rows={5}
-                  value={form.message}
-                  required
-                  id="message"
-                  label="Message"
-                  onChange={handleChange}
-                  type={"text"}
-                  name="message"
-                />
-
-                {loading === true ? (
-                  <button className={styles.contactBtnLoading}>
-                    {" "}
-                    Sending{" "}
-                    <ThreeDots
-                      height="50"
-                      width="50"
-                      radius="9"
-                      color="#161854"
-                      ariaLabel="three-dots-loading"
-                      wrapperStyle={{}}
-                      wrapperClass=""
-                      visible={true}
-                    />
-                  </button>
-                ) : (
-                  <button className={styles.contactBtn}>Send</button>
-                )}
-              </form>
+                  {loading === true ? (
+                    <button className={styles.contactBtnLoading}>
+                      {" "}
+                      Sending{" "}
+                      <ThreeDots
+                        height="50"
+                        width="50"
+                        radius="9"
+                        color="#161854"
+                        ariaLabel="three-dots-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                      />
+                    </button>
+                  ) : (
+                    <button className={styles.contactBtn}>Send</button>
+                  )}
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </motion.div>
-    </div>
+        </motion.div>
+      </div>
     </>
   );
 };

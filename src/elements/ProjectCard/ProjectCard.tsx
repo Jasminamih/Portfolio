@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { fadeIn } from "../../utils/Motion";
 import styles from "./ProjectCard.module.scss";
-import { F_Open_Sans, F_Roboto } from "@/fonts";
+import { F_Open_Sans } from "@/fonts";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import Image from "next/image"
+import Image from "next/image";
 
 interface Props {
   index: number;
@@ -13,11 +13,10 @@ interface Props {
   description: string;
   tags: {
     name: string;
-    color: string;
   }[];
   image: string;
   source_code_link: string;
-  live_page:string
+  live_page: string;
 }
 
 const ProjectCard: FC<Props> = ({
@@ -27,7 +26,7 @@ const ProjectCard: FC<Props> = ({
   tags,
   image,
   source_code_link,
-  live_page
+  live_page,
 }) => {
   return (
     <motion.div
@@ -36,7 +35,13 @@ const ProjectCard: FC<Props> = ({
     >
       <Tilt className={styles.card}>
         <div className={styles.imgWrapper}>
-          <Image priority fill  src={image} alt="project_image" className={styles.img} />
+          <Image
+            priority
+            fill
+            src={image}
+            alt="project_image"
+            className={styles.img}
+          />
         </div>
 
         <div className={`${styles.text} ${F_Open_Sans.className}`}>
@@ -53,9 +58,7 @@ const ProjectCard: FC<Props> = ({
 
           <div className={styles.tags}>
             {tags.map((tag) => (
-              <p key={`${name}-${tag.name}`} className={tag.color}>
-                #{tag.name}
-              </p>
+              <p key={`${name}-${tag.name}`}>#{tag.name}</p>
             ))}
           </div>
         </div>
