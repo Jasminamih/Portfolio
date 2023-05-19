@@ -1,23 +1,19 @@
 import { Html, useProgress } from "@react-three/drei";
 import { RotatingLines } from "react-loader-spinner";
-
+import styles from "./Loader.module.scss"
 const CanvasLoader = () => {
   return (
     <Html
       as="div"
       center
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
+      className={styles.loaderWrapper}
+
     >
       <RotatingLines
         strokeColor="grey"
         strokeWidth="5"
-        animationDuration="0.10"
-        width="96"
+        animationDuration="0.30"
+        width="54"
         visible={true}
       />
     </Html>

@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Projects from "@/modules/Projects/Projects";
 import Contact from "@/modules/Contact/Contact";
-import ThreeScene from "@/elements/canvas/Stars/stars";
 import About from "@/modules/About/About";
 import Banner from "../modules/Banner/Banner";
 import Navigation from "@/modules/Navigation/Navigation";
 import Footer from "@/modules/Footer/Footer";
+import StarsCanvas from "@/elements/canvas/Stars/Stars";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
         <Projects />
         <Contact />
         <Footer/>
-        <ThreeScene />
+        <StarsCanvas/>
       </main>
     </>
   );

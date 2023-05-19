@@ -47,7 +47,7 @@ const EarthCanvas = () => {
             far: 200,
           }}
         >
-          {/* <Suspense fallback={<CanvasLoader />}> */}
+           <Suspense fallback={<CanvasLoader />}> 
             <OrbitControls
             autoRotate
               enableZoom={false}
@@ -55,7 +55,7 @@ const EarthCanvas = () => {
               minPolarAngle={Math.PI / 2}
             />
             <Stage><Model isMobile={isMobile}/></Stage>
-          {/* </Suspense> */}
+         </Suspense> 
         </Canvas>
       </div>
     );

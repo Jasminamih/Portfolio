@@ -1,14 +1,13 @@
 import * as THREE from "three";
 import React, { useRef, useEffect } from "react";
+import styles from "./Stars.module.scss";
 
-const ThreeScene = () => {
+const StarsCanvas = () => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!mountRef.current) return;
-
     const scene = new THREE.Scene();
-
     const camera = new THREE.PerspectiveCamera(
       90,
       window.innerWidth / window.innerHeight,
@@ -23,13 +22,12 @@ const ThreeScene = () => {
 
     const starGeometry = new THREE.SphereGeometry(5000, 64, 64);
     const starMaterial = new THREE.MeshBasicMaterial({
-      map: new THREE.TextureLoader().load("/stars.jpg"),
       side: THREE.BackSide,
     });
     const starField = new THREE.Mesh(starGeometry, starMaterial);
     scene.add(starField);
 
-    const starCount = Math.floor(Math.random() * 5000) + 1000;
+    const starCount = Math.floor(Math.random() * 3000) + 1000;
     const starGeometrySmall = new THREE.SphereGeometry(0.2, 16, 16);
     const starMaterialSmall = new THREE.MeshBasicMaterial({ color: 0xffffff });
     const stars: any[] = [];
@@ -73,10 +71,10 @@ const ThreeScene = () => {
   }, []);
 
   return (
-    <div id="three-container">
+    <div className={styles.stars}>
       <div ref={mountRef} />
     </div>
   );
 };
 
-export default ThreeScene;
+export default StarsCanvas;
