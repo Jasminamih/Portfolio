@@ -48,20 +48,21 @@
     }
   }
   .image {
-    width: 300px;
-    height: 320px;
+    width: 310px;
+    height: 370px;
     position: relative;
 
     @media screen and (max-width: $tablet-XL) {
       width: 250px;
-      height: 270px;
+      height: 290px;
     }
     @media screen and (max-width: $phone-L) {
-      width: 200px;
-      height: 220px;
+      width: 210px;
+      height: 250px;
     }
     img {
       border-radius: 50%;
+      object-fit: cover;
       z-index: 2;
     }
   }

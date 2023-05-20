@@ -11,7 +11,7 @@ const About: FC = () => {
   return (
     <div id="About" className={styles.about}>
       <div className={styles.image}>
-        <Image priority src={"/a.jpg"} fill alt="myPhoto" />
+        <Image priority src={"/me.jpg"} fill alt="myPhoto" />
       </div>
       <div className={`${styles.text} ${F_Open_Sans.className}`}>
         <h1 className={styles.title}>About me</h1>

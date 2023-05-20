@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio</title>
-        <meta name="description" content="Portfolio-Jasmina Mihajloska" />
+        <title>Mihajloska</title>
+        <meta name="description" content="Portfolio of Jasmina Mihajloska, a Front-end developer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoJM.png" />
         <meta property="og:image" content="/og-image.png"/>

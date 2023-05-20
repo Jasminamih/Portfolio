@@ -88,7 +88,7 @@ const projects = [
       },
     ],
     image: "/street.webp",
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Jasminamih/Street-artists",
     live_page: "https://streetartists-mihajloska.netlify.app/",
   },
 
