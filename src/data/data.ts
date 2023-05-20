@@ -15,7 +15,7 @@ const projects = [
       },
     ],
     image: "/nomad.webp",
-    source_code_link: "https://github.com/markovskiL/NomadJobs",
+    source_code_link: "",
     live_page: "https://www.nomadjobs.kg/",
   },
   {
@@ -53,8 +53,7 @@ const projects = [
       },
     ],
     image: "/cloud.webp",
-    source_code_link: "https://github.com/markovskiL/Nomad-Cloud",
-    live_page: "https://github.com/",
+    source_code_link: "",
   },
   {
     name: "Coin tracker",

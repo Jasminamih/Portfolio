@@ -11,7 +11,7 @@ const Works: FC = () => {
       className={`${styles.projects}  ${F_Open_Sans.className}`}
     >
       <div className={styles.text}>
-        <h2 className={styles.title}>Projects.</h2>
+        <h2 className={styles.title}>Projects</h2>
         <p className={styles.desc}>
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with

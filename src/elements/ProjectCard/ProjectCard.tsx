@@ -15,8 +15,8 @@ interface Props {
     name: string;
   }[];
   image: string;
-  source_code_link: string;
-  live_page: string;
+  source_code_link?: string;
+  live_page?: string;
 }
 
 const ProjectCard: FC<Props> = ({

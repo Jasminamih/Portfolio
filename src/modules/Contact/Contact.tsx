@@ -112,8 +112,7 @@ const Contact = () => {
           className={styles.contactPage}
         >
           <div className={styles.contactText}>
-            <p className={styles.sectionSubText}>Get in touch</p>
-            <h3 className={styles.sectionHeadText}>Contact.</h3>
+            <h3 className={styles.sectionHeadText}>Contact me</h3>
           </div>
           <div className={`${styles.contactWrapper} ${F_Ubuntu.className}`}>
             <div className={styles.contactOptionsContainer}>
