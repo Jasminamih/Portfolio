@@ -15,7 +15,7 @@ export default function Home() {
         <meta name="description" content="Portfolio-Jasmina Mihajloska" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoJM.png" />
-        <meta property="og:image" content="/logoJM.png"/>
+        <meta property="og:image" content="/og-image.png"/>
 
       </Head>
 
