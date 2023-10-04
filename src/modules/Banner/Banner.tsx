@@ -14,7 +14,7 @@ const Banner: FC = () => {
         <h1>Jasmina Mihajloska</h1>
         <h2>A Front-End developer </h2>
       </div>
-      <MoonCanvas />{" "}
+      <MoonCanvas />{" "} 
     </div>
   );
 };

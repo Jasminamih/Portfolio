@@ -40,9 +40,9 @@ const EarthCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Stage>
+        <Stage> 
           <Model isMobile={isMobile} />
-        </Stage>
+       </Stage> 
      </Suspense>  
       </Canvas>
     </div>

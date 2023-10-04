@@ -31,7 +31,7 @@ export function Model(props: ModelProps) {
       <group
         position={[0.22, -0.19, 0.17]}
         rotation={[-1.72, -0.22, 0.01]}
-        scale={props.isMobile ? 0.2 : 0.4}
+        scale={props.isMobile ? 0.2 : 0.7}
       >
         <mesh
           geometry={nodes.Object_3.geometry}

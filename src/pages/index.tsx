@@ -8,6 +8,16 @@ import Footer from "@/modules/Footer/Footer";
 import StarsCanvas from "@/elements/canvas/Stars/StarsCanvas";
 
 export default function Home() {
+
+
+  fetch('http://localhost:3000')
+  .then(response => {
+    // Handle the response
+  })
+  .catch(error => {
+    console.error(error.message);
+  });
+
   return (
     <>
       <Head>
